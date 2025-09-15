@@ -1,3 +1,15 @@
+/*Assignment name	: ft_strcspn
+Expected files	: ft_strcspn.c
+Allowed functions: None
+---------------------------------------------------------------
+
+Reproduce exactly the behavior of the function strcspn
+(man strcspn).
+
+The function should be prototyped as follows:
+
+size_t	ft_strcspn(const char *s, const char *reject);*/
+
 #include <stdlib.h>
 
 size_t	ft_strcspn(const char *s, const char *reject)
@@ -24,7 +36,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 
 int	main(void)
 {
-	const char *a = "";
+	const char *a = "too good abc hi";
 	const char *b = "abc";
 
 	printf("%zu\n", ft_strcspn(a, b));
