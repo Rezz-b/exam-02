@@ -15,26 +15,29 @@ char	*ft_strrev(char *str)
 {
 	int	i;
 	int	j;
-	char	*temp;
+	char	temp;
 
 	i = 0;
-	j = 0;
 	while (str[i])
 		i++;
-	while (j < i - 1)
+	j = 0;
+	while (j < i)
 	{
+		temp = str[j];
 		str[j] = str[i - 1];
-		str[i - 1] = tmp;
-		tmp = str[j];
+		str[i - 1] = temp;
 		j++;
 		i--;
 	}
-	return (tmp);
-}
+	return (str);
 
+}
 #include <stdio.h>
 
 int	main(void)
 {
-	char	*s;
+	char	s[] = "i can see";
+	
+	printf("%s\n", ft_strrev(s));
+	return (0);
 }
